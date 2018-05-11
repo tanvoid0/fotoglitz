@@ -15,6 +15,8 @@ Route::group(['namespace' => 'BackEnd'],function()
 {
   Route::get('/dashboard','DashboardController@dashboard')->name('home')->middleware('auth');
   Route::get('/user-list','DashboardController@userList')->middleware('auth');
+  Route::get('/edit-profile','DashboardController@editProfile')->middleware('auth');
+  Route::get('/request-list','DashboardController@requestList')->middleware('auth');
 });
 Route::get('logout', function() {
     Auth::logout();

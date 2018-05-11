@@ -14,7 +14,15 @@ class DashboardController extends Controller
   }
   public function userList()
   {
-      $users = User::all();
+    $users = User::all();
     return view('BackEnd.user.user-list', compact('users'));
+  }
+  public function editProfile()
+  {
+    return view('BackEnd.user.edit-profile');
+  }
+  public function requestList()
+  {
+    return view('BackEnd.trail-request.request-list');
   }
 }
